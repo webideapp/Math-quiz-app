@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Math Quiz | Sharp Minds Play</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="assets/favicon.jpg">
+    <link rel="apple-touch-icon" href="assets/favicon.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700;800&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/components/navigation.css">
+    <link rel="stylesheet" href="styles/sections/hero.css">
+    <link rel="stylesheet" href="styles/sections/features.css">
+    <link rel="stylesheet" href="styles/sections/pricing.css">
+    <link rel="stylesheet" href="styles/widgets/quiz.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="nav-brand">
+                <div class="brand-logo-container">
+                    <img src="assets/favicon.jpg" alt="MathQuiz Logo" class="brand-logo">
+                </div>
+                <h1>MathQuiz</h1>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing-section">Pricing</a></li>
+                <li><a href="#social-proof">Reviews</a></li>
+                <li><a href="https://apps.apple.com/us/app/math-quiz-learn-math-fast/id6751744778" target="_blank" class="btn-get-app micro-interaction">Get App</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Voted #1 Math Trainer</div>
+                <h1>Master Math.<br>Anywhere.</h1>
+                <p>Sharpen your mental arithmetic with multiple-choice challenges and real-time analytics. Designed for speed, built for results.</p>
+                <div class="hero-ctas">
+                    <a href="https://apps.apple.com/us/app/math-quiz-learn-math-fast/id6751744778" target="_blank" class="btn-download micro-interaction">
+                        <i class="fab fa-apple"></i>
+                        <span>App Store</span>
+                    </a>
+                    <a href="#features" class="btn-learn-more micro-interaction">Learn More</a>
+                </div>
+            </div>
+            
+            <!-- iPhone Device Frame Preview -->
+            <div class="iphone-container">
+                <div class="iphone-frame">
+                    <div class="iphone-screen">
+                        <div class="mockup-ui">
+                            <div class="app-header">
+                                <span class="status-bar-time">9:41</span>
+                                <div class="app-nav-dots">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-category-label">Multiplication</div>
+
+                            <div id="quiz-widget" class="widget-container mini">
+                                <div class="progress-container">
+                                    <div class="progress-bar"><div id="progress-inner"></div></div>
+                                    <span class="progress-text">6/10</span>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <span id="problem">8 × 7</span>
+                                </div>
+                                
+                                <div id="options-grid" class="options-grid">
+                                    <!-- Options injected by JS -->
+                                    <button class="option-btn micro-interaction">48</button>
+                                    <button class="option-btn micro-interaction">56</button>
+                                    <button class="option-btn micro-interaction">64</button>
+                                    <button class="option-btn micro-interaction">54</button>
+                                </div>
+                                
+                                <div class="status-container">
+                                    <p id="status-message"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="iphone-glow"></div>
+            </div>
+        </section>
+
+        <!-- Feature Grid -->
+        <section id="features" class="container">
+            <div class="section-header" style="text-align: center; margin-bottom: 60px;">
+                <h2 style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; letter-spacing: -0.04em; margin-bottom: 1rem;">Built for performance.</h2>
+                <p style="color: var(--color-apple-gray); font-size: 1.2rem;">Everything you need to master arithmetic in the palm of your hand.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item micro-interaction">
+                    <div class="icon-box">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Instant Feedback</h3>
+                    <p>Get immediate visual cues for every answer, helping you learn from mistakes in real-time.</p>
+                </div>
+                <div class="feature-item micro-interaction">
+                    <div class="icon-box">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Smart Progress</h3>
+                    <p>Track your accuracy and speed growth with native-style analytical dashboards.</p>
+                </div>
+                <div class="feature-item micro-interaction">
+                    <div class="icon-box">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Adaptive Flow</h3>
+                    <p>Smart difficulty adjustment that keeps you in the zone without being too easy or too hard.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing-section">
+            <div class="container">
+                <div class="pricing-header">
+                    <h2>Open for everyone.</h2>
+                    <p>Start your math journey today. We believe education should be accessible, high-quality, and free.</p>
+                </div>
+
+                <div class="pricing-grid single-tier">
+                    <!-- Unified Free Tier -->
+                    <div class="pricing-card featured micro-interaction">
+                        <div class="free-badge-float">
+                            <i class="fas fa-gift"></i>
+                            Totally Free
+                        </div>
+                        <span class="tier-name">Full Access</span>
+                        <div class="tier-price">
+                            <span class="price-amount">$0</span>
+                            <span class="price-period">forever</span>
+                        </div>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> Unlimited Quizzes & Problems</li>
+                            <li><i class="fas fa-check-circle"></i> All Operations Included</li>
+                            <li><i class="fas fa-check-circle"></i> Advanced Analytics Dashboard</li>
+                            <li><i class="fas fa-check-circle"></i> Global Leaderboards</li>
+                            <li><i class="fas fa-check-circle"></i> Adaptive Difficulty AI</li>
+                            <li><i class="fas fa-check-circle"></i> Zero Ads, Privacy Focused</li>
+                        </ul>
+                        <a href="https://apps.apple.com/us/app/math-quiz-learn-math-fast/id6751744778" class="btn-pricing primary">Download Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof -->
+        <section id="social-proof">
+            <div class="marquee-container">
+                <div id="marquee-logos">
+                    <span>DESIGNED FOR SPEED • ADAPTIVE LEARNING • MENTAL MASTERY • APPLE EXCELLENCE • MATH FOR ALL • NO ADS • PRIVACY FIRST</span>
+                    <span>DESIGNED FOR SPEED • ADAPTIVE LEARNING • MENTAL MASTERY • APPLE EXCELLENCE • MATH FOR ALL • NO ADS • PRIVACY FIRST</span>
+                </div>
+            </div>
+            <div class="container">
+                <div class="testimonial-grid">
+                    <div class="testimonial-card micro-interaction">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <blockquote>"The interface feels like a native Apple app. It's fast, fluid, and incredibly effective."</blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <strong>Sarah Jenkins</strong>
+                                <span>Mathematics Educator</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card micro-interaction">
+                        <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        <blockquote>"Finally a math tool that respects design. It's addictive, educational, and beautiful."</blockquote>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <strong>Marc Andre</strong>
+                                <span>Product Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-brand-top">
+                        <img src="assets/favicon.jpg" alt="MathQuiz Logo" class="footer-logo">
+                        <h2>MathQuiz</h2>
+                    </div>
+                    <p>Master math through play.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="pages/legal/privacy.html">Privacy Policy</a>
+                    <a href="pages/legal/terms.html">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 MathQuiz. Designed with Apple Human Interface principles.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
