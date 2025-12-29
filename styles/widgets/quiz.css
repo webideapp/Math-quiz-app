@@ -1,0 +1,162 @@
+/* App UI Styling within iPhone - Mocking the actual App Store app */
+.mockup-ui {
+    padding: 50px 24px 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #F8F9FF;
+}
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.quiz-category-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-apple-gray);
+    font-weight: 800;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.widget-container.mini {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.progress-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 8px;
+    background: #E8EBF5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#progress-inner {
+    width: 0%;
+    height: 100%;
+    background: var(--color-apple-blue);
+    transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.progress-text {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-apple-blue);
+    min-width: 35px;
+}
+
+.problem-card {
+    background: white;
+    width: 100%;
+    padding: 40px 20px;
+    border-radius: 32px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+#problem {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    color: var(--color-slate-900);
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    width: 100%;
+}
+
+.option-btn {
+    aspect-ratio: 1.2 / 1;
+    border-radius: 24px;
+    border: 2px solid transparent;
+    background: white;
+    color: var(--color-slate-900);
+    font-size: 1.5rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s var(--transition-ios);
+}
+
+.option-btn:hover {
+    background: #fdfdfd;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.option-btn.correct {
+    background: var(--color-emerald);
+    color: white;
+    box-shadow: 0 10px 20px rgba(52, 199, 89, 0.3);
+}
+
+.option-btn.wrong {
+    background: var(--color-crimson);
+    color: white;
+    box-shadow: 0 10px 20px rgba(255, 59, 48, 0.3);
+}
+
+.option-btn.hint {
+    border-color: var(--color-emerald);
+    background: rgba(52, 199, 89, 0.05);
+}
+
+.status-container {
+    margin-top: auto;
+    padding-bottom: 20px;
+    height: 40px;
+}
+
+#status-message {
+    font-weight: 800;
+    font-size: 1.1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px);
+}
+
+#status-message[style*="opacity: 1"] {
+    transform: translateY(0);
+}
+
+/* Interactive States */
+.shake {
+    animation: appleShake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+@keyframes appleShake {
+    10%, 90% { transform: translate3d(-2px, 0, 0); }
+    20%, 80% { transform: translate3d(4px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-6px, 0, 0); }
+    40%, 60% { transform: translate3d(6px, 0, 0); }
+}
